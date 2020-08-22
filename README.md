@@ -1,5 +1,5 @@
 <h1> Redis </h1>
-<p> Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. 
+<p> Redis is an open source (BSD licensed), in-memory data structure , used as a database, cache and message . 
 It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs,
 geospatial indexes with radius queries and streams. </p>
 
@@ -34,4 +34,63 @@ geospatial indexes with radius queries and streams. </p>
 
 ![5](https://user-images.githubusercontent.com/62602944/90472192-ca37cd80-e141-11ea-8c6e-a394bcc7be42.png)
 
-Continue.......
+<h1> Data Type </h1>
+<h2> Strings </h2>
+<p>Strings are the most basic kind of Redis value. Redis Strings are binary safe, this means that a Redis string can contain any kind of data, for instance a JPEG image or a serialized Ruby object.</p>
+<p> A String value can be at max 512 Megabytes in length.</p>
+<h3> String Commands</h3>
+<p> For set value</p> <code>set (key) (value)</code>
+
+![a1](https://user-images.githubusercontent.com/62602944/90949280-fb2d4080-e468-11ea-80c4-fe18966c7396.png)
+
+<p>For get value</p><code>get (key)</code>
+
+![1](https://user-images.githubusercontent.com/62602944/90949283-03857b80-e469-11ea-9bdc-418423ea8925.png)
+
+<p>See all keys </p><code>keys *</code>
+
+![2](https://user-images.githubusercontent.com/62602944/90949315-2b74df00-e469-11ea-8594-272ed0141d7c.png)
+
+<p>For delete key</p><code>del (key)</code>
+
+![3](https://user-images.githubusercontent.com/62602944/90949318-2e6fcf80-e469-11ea-88a4-21ccb0e8747e.png)
+
+<p> Flush all the keys</p> <code> flushall</code>
+
+![4](https://user-images.githubusercontent.com/62602944/90949321-33cd1a00-e469-11ea-861a-e17c45fe36be.png)
+
+<p> Define time. After this time(second) the key will be delete.</p><code>setex (key) (second) (value)</code>
+<p> See how many time to delete the key </p> <code>ttl (key)</code>
+
+![5](https://user-images.githubusercontent.com/62602944/90949327-39c2fb00-e469-11ea-9a37-dbaebe72788c.png)
+
+<p> If you have same key It did not set.If you have not same key It set this value</p><code>setnx (key) (value)</code>
+
+![6](https://user-images.githubusercontent.com/62602944/90949329-3d568200-e469-11ea-97f8-41b7148ca563.png)
+
+<p> See key values length</p><code>strlen (key)</code>
+
+![7](https://user-images.githubusercontent.com/62602944/90949332-41829f80-e469-11ea-9f3b-66e38247ffb3.png)
+
+<p> Define time. After this time(millisecond) the key will be delete.<p><code>psetex (key) (time) (value)</code>
+  
+![8](https://user-images.githubusercontent.com/62602944/90949333-45162680-e469-11ea-9b35-b8720c30e1a9.png)
+
+<p> Set multiple keys</p><code>mset (key) (value) (key) (value).....</code>
+
+![9](https://user-images.githubusercontent.com/62602944/90949335-49dada80-e469-11ea-8fe6-bcc1f8339f4a.png)
+
+<p> Auto increment</p><code>incr (key)</code>
+<p> Auto decrement </p> <code> decr (key)</code>
+<p> Increment by number</p><code>imcrby (key) (number)</code>
+<p> Decrement by number</p><code>decrby (key) (number)</code>
+
+![10](https://user-images.githubusercontent.com/62602944/90949337-4d6e6180-e469-11ea-9aa5-6b61557daad5.png)
+
+<p>Add with previous value</p><code>append (key) ("value")</code>
+
+![11](https://user-images.githubusercontent.com/62602944/90949339-5101e880-e469-11ea-972d-060298c9535c.png)
+
+<h2> Hashes </h2>
+<p>Redis Hashes are maps between string fields and string values, so they are the perfect data type to represent objects</p>
+
