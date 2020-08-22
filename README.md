@@ -39,55 +39,75 @@ geospatial indexes with radius queries and streams. </p>
 <p>Strings are the most basic kind of Redis value. Redis Strings are binary safe, this means that a Redis string can contain any kind of data, for instance a JPEG image or a serialized Ruby object.</p>
 <p> A String value can be at max 512 Megabytes in length.</p>
 <h3> String Commands</h3>
-<p> For set value</p> <code>set (key) (value)</code>
+<p> For set value</p> 
+<pre><code>set (key) (value)</code></pre>
 
 ![a1](https://user-images.githubusercontent.com/62602944/90949280-fb2d4080-e468-11ea-80c4-fe18966c7396.png)
 
-<p>For get value</p><code>get (key)</code>
+<p>For get value</p>
+<pre><code>get (key)</code></pre>
 
 ![1](https://user-images.githubusercontent.com/62602944/90949283-03857b80-e469-11ea-9bdc-418423ea8925.png)
 
-<p>See all keys </p><code>keys *</code>
+<p>See all keys </p>
+<pre><code>keys *</code></pre>
 
 ![2](https://user-images.githubusercontent.com/62602944/90949315-2b74df00-e469-11ea-8594-272ed0141d7c.png)
 
-<p>For delete key</p><code>del (key)</code>
+<p>For delete key</p>
+<pre><code>del (key)</code></pre>
 
 ![3](https://user-images.githubusercontent.com/62602944/90949318-2e6fcf80-e469-11ea-88a4-21ccb0e8747e.png)
 
-<p> Flush all the keys</p> <code> flushall</code>
+<p> Flush all the keys</p> 
+<pre><code> flushall</code></pre>
 
 ![4](https://user-images.githubusercontent.com/62602944/90949321-33cd1a00-e469-11ea-861a-e17c45fe36be.png)
 
-<p> Define time. After this time(second) the key will be delete.</p><code>setex (key) (second) (value)</code>
-<p> See how many time to delete the key </p> <code>ttl (key)</code>
+<p> Define time. After this time(second) the key will be delete.</p>
+<pre><code>setex (key) (second) (value)</code></pre>
+
+<p> See how many time to delete the key </p>
+<pre> <code>ttl (key)</code></pre>
 
 ![5](https://user-images.githubusercontent.com/62602944/90949327-39c2fb00-e469-11ea-9a37-dbaebe72788c.png)
 
-<p> If you have same key It did not set.If you have not same key It set this value</p><code>setnx (key) (value)</code>
+<p> If you have same key It did not set.If you have not same key It set this value</p>
+<pre><code>setnx (key) (value)</code></pre>
 
 ![6](https://user-images.githubusercontent.com/62602944/90949329-3d568200-e469-11ea-97f8-41b7148ca563.png)
 
-<p> See key values length</p><code>strlen (key)</code>
+<p> See key values length</p>
+<pre><code>strlen (key)</code></pre>
 
 ![7](https://user-images.githubusercontent.com/62602944/90949332-41829f80-e469-11ea-9f3b-66e38247ffb3.png)
 
-<p> Define time. After this time(millisecond) the key will be delete.<p><code>psetex (key) (time) (value)</code>
+<p> Define time. After this time(millisecond) the key will be delete.</p>
+<pre><code>psetex (key) (time) (value)</code></pre>
   
 ![8](https://user-images.githubusercontent.com/62602944/90949333-45162680-e469-11ea-9b35-b8720c30e1a9.png)
 
-<p> Set multiple keys</p><code>mset (key) (value) (key) (value).....</code>
+<p> Set multiple keys</p>
+<pre><code>mset (key) (value) (key) (value).....</code></pre>
 
 ![9](https://user-images.githubusercontent.com/62602944/90949335-49dada80-e469-11ea-8fe6-bcc1f8339f4a.png)
 
-<p> Auto increment</p><code>incr (key)</code>
-<p> Auto decrement </p> <code> decr (key)</code>
-<p> Increment by number</p><code>imcrby (key) (number)</code>
-<p> Decrement by number</p><code>decrby (key) (number)</code>
+<p> Auto increment</p>
+<pre><code>incr (key)</code></pre>
+
+<p> Auto decrement </p> 
+<pre><code> decr (key)</code></pre>
+
+<p> Increment by number</p>
+<pre><code>imcrby (key) (number)</code></pre>
+
+<p> Decrement by number</p>
+<pre><code>decrby (key) (number)</code></pre>
 
 ![10](https://user-images.githubusercontent.com/62602944/90949337-4d6e6180-e469-11ea-9aa5-6b61557daad5.png)
 
-<p>Add with previous value</p><code>append (key) ("value")</code>
+<p>Add with previous value</p>
+<pre><code>append (key) ("value")</code></pre>
 
 ![11](https://user-images.githubusercontent.com/62602944/90949339-5101e880-e469-11ea-972d-060298c9535c.png)
 
